@@ -4,10 +4,7 @@ import Link from 'next/link';               // import link componets from the ne
 const Home = props => (             // no need to import as next will take care of it. 
     // V  down link to route to the another page 
     <div>                           
-        <p>hey!!!!</p>                  
-        <Link href='/sell'>                  
-            <a>Selll@</a>
-        </Link>
+        <p>hey!!!!</p>
     </div>
 );                                 // this is a function components
 
