@@ -4,18 +4,17 @@ import Nav from './Nav';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 
-
 Router.onRouteChangeStart = () => {
-    console.log('onRouteChangeStart Triggered');
+  NProgress.start();
 };
-
-Router.onRouteChangeComplete = () => { 
-    console.log('onRouteChangeComplete Triggerred');
+Router.onRouteChangeComplete = () => {
+  NProgress.done();
 };
 
 Router.onRouteChangeError = () => {
-    console.log('onRouteChangheError Triggerred');
-}
+  NProgress.done();
+};
+
 
 const Logo = styled.h1`
   font-size: 4rem;
