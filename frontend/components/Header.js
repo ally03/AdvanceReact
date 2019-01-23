@@ -29,6 +29,13 @@ const Logo = styled.h1`
     text-transform: uppercase;
     text-decoration: none;
   }
+  p {
+    padding: 0.5rem 1rem;
+    font-size: 13px;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
   @media (max-width: 1300px) {
     margin: 0;
     text-align: center;
@@ -59,7 +66,10 @@ const Header = () => (
     <div className="bar">
       <Logo>
         <Link href="/">
-          <a>Shop now</a>
+          <div>
+            <a>Shop now</a>
+            <p>great service my great people</p>
+          </div>
         </Link>
       </Logo>
       <Nav />
