@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import Nav from './Nav';
+import Search from './Search';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 
@@ -22,6 +23,7 @@ const Logo = styled.h1`
   position: relative;
   z-index: 2;
   transform: skew(-7deg);
+  line-height: 30px;
   a {
     padding: 0.5rem 1rem;
     background: ${props => props.theme.red};
@@ -73,6 +75,7 @@ const Header = () => (
         </Link>
       </Logo>
       <Nav />
+      <Search />
     </div>
     <div className="sub-bar">
     </div>
