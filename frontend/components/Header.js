@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Nav from "./Nav";
+// import Link from "next/link";
+// import Nav from "./Nav";
 import Router from "next/router";
 import NProgress from "nprogress";
 import { fade } from "@material-ui/core/styles/colorManipulator";
@@ -16,6 +16,9 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
+// import HeaderNav from "./HeaderNav";
+import Explore from "@material-ui/icons/Explore";
+import AccountCircle from "@material-ui/icons/AccountCircle";
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -136,21 +139,40 @@ class Header extends React.Component {
               Shop Now
             </Typography>
             {/* <Nav /> */}
-            <div className={classes.grow} />
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon />
+            <div />
+            <div>
+              <div className={classes.grow} />
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon />
+                </div>
+                <InputBase
+                  placeholder="Search…"
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput
+                  }}
+                />
               </div>
-              <InputBase
-                placeholder="Search…"
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput
-                }}
-              />
             </div>
+            <Button
+              href="#pablo"
+              className={classes.navLink + " " + classes.navLinkActive}
+              onClick={e => e.preventDefault()}
+              color="transparent"
+            >
+              <Explore className={classes.icons} /> Discover
+            </Button>
+            <Button
+              href="#pablo"
+              className={classes.navLink}
+              onClick={e => e.preventDefault()}
+            >
+              <AccountCircle className={classes.icons} /> Profile
+            </Button>
             <Button color="inherit">Login</Button>
           </Toolbar>
+          {/* <HeaderNav /> */}
         </AppBar>
       </div>
     );
