@@ -159,7 +159,6 @@ class Header extends React.Component {
               href="#pablo"
               className={classes.navLink + " " + classes.navLinkActive}
               onClick={e => e.preventDefault()}
-              color="transparent"
             >
               <Explore className={classes.icons} /> Discover
             </Button>
